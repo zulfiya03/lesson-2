@@ -15,7 +15,7 @@ while(true){
         break
     }
 
-    if(addUser){
+    if(isAddUser){
         const name = prompt('Foydalanuvchining nomi: ')
         const surname = prompt('Foydalanuvchining familyasi: ')
         const age = prompt('Foydalanuvchining yoshi: ')
