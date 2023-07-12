@@ -7,8 +7,9 @@ while(true){
     info()
     
     const command = prompt('Buyruqni kiriting: ')
-    const isExit = commands.exit.includes(command)
-    const addUser = commands.addUser.includes(command)
+    const isExit = commands["Exit"].includes(command)
+    const isAddUser = commands["Add User"].includes(command)
+    const isDelete = commands["Delete User"].includes(command)
     
     if(isExit){
         break

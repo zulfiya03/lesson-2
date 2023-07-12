@@ -1,4 +1,4 @@
-const commands = require('./commands')
+const {commands} = require('./commands')
 
 function info(){
     let infoText = 'Buyruqlar ro`yhati: \n'

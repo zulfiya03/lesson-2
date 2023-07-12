@@ -1,7 +1,8 @@
 const commands = {
-    exit: ['exit', 'e', '/q'],
-    addUser: ['add', 'a', 'au'],
-    deleteUser: ['del', 'delete', 'd']
+    "Exit": ['exit', 'e', '/q'],
+    "Add User": ['add', 'a', 'au'],
+    "Delete User": ['del', 'delete', 'd'],
+    "Edit User": ['edit', 'ed', 'eu']
 }
 
 exports.commands = commands
