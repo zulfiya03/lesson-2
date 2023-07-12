@@ -4,6 +4,8 @@ const {commands} = require('./commands')
 const { getDB, setDB, getID } = require("./db.service")
 const info = require("./info") 
 
+const {addUser, deleteUser, editUser} = require('./user.controller')
+
 while(true) {
     info()
     const command = prompt('Buyruqni kiriting: ')
@@ -20,57 +22,27 @@ while(true) {
         const name = prompt('Foydalanuvchining nomi: ')
         const surname = prompt('Foydalanuvchining familyasi: ')
         const age = prompt('Foydalanuvchining yoshi: ')
-
-        const newUser = {
-            id: getID(),
-            name,
-            surname,
-            age 
-        }
-
-        const db = getDB()
-        db.users.push(newUser)
-        setDB(db)
+        addUser(name, surname, age)
     }
 
     if(isDelete) {
         const db = getDB()
         console.log(db.users);
         const id = prompt('ID ni kiriting: ')
-        const newArray = db.users.filter((user) => user.id !== +id)
-        setDB({ id: db.id, users: newArray})
+        deleteUser(id)
     }
 
     if(isEdit) {
         const db = getDB()
         console.log(db.users);
         const id = prompt('ID ni kiriting: ')
-
         const user = db.users.find((u) => u.id === +id)
 
         if(!user){
             return
         }
-
         const key = prompt('Qaysi keyni o`zgartirmoqchisiz: ')
-
-        if(!Object.keys(user).includes(key)){
-            return
-        }
-
         const value = prompt('Qiymatni kiriting: ')
-
-        const newArray = db.users.map((u) => {
-            if(u.id === +id) {
-                    return {
-                        ...u,
-                        [key]: value
-                    }
-            } else {
-                return u
-            }
-        })
-        setDB({id: db.id, users:newArray})
-
+        editUser(id, key, value)
     }
-    }
+}
