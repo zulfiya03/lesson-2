@@ -1,11 +1,16 @@
 # Users Control
 
-1. Foydalanuvchi qo`shish
-2. Foydalanuvchi o`chirish
-3. Foydalanuvchilar ma`lumotini chiqarish
+1. Adding users // Foydalanuvchi qo`shish
+2. Deleting users // Foydalanuvchi o`chirish
+3. Showing users information // Foydalanuvchilar ma`lumotini chiqarish
 
 ---
 
-1. To`xtamasdan isahlashi
-2. Buyruqlar ro`yhatini chiqarib turishi
-3. Ma'lumotlarni `db.json` fayliga saqlashi kerak
+4. Foydalanuvchi ma`lumotlarini o'zgartirish
+5. Loyihani bo`laklarga(sloylarga) bo'lish
+
+---
+
+1. Without stopp // To`xtamasdan ishlashi
+2. Showing commands list // Buyruqlar ro`yhatini chiqarib turishi
+3.  Saving infos in file `db.json` // Ma'lumotlarni `db.json` fayliga saqlashi kerak
