@@ -7,8 +7,8 @@ function addUser(name, surname, age) {
         age,
     }
     const db = getDB()
-    db.users.push(newUser)
-    setDB(db)
+    db.users.push(newUser);
+    setDB(db);
 }
 
 function deleteUser(id) {
